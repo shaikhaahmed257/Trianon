@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content=“restaurant, dessert, food, menu”>
+  <title>Trianon – Book a Table</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<!--create a header-->
+  <header>
+    <!--logo nav-->
+    <nav>
+      <h1 class="nav-logo">
+        <a href="index.html"><span>T</span></a>
+      </h1>
+
+      <!--navigation bar-->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="book.html" class="active">Book a Table</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <ul class="mobile-nav" id="mobileNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="book.html">Book a Table</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </header>
+
+
+
+    <!--main section-->
+  <main>
+    <header class="page-hero">
+      <span class="section-label">Reserve Your Seat</span>
+      <h1 class="section-title">Book a Table</h1>
+      <div class="gold-line center"></div>
+      <p>Fill in your details and our team will confirm your reservation within 24 hours.</p>
+    </header>
+
+    <!--information section-->
+    <section class="book-section">
+      <div class="container">
+
+        <div class="info-strip">
+          <article class="info-card">
+            <h4>Opening Hours</h4>
+            <p>Mon – Thu: 8am – 11pm<br />Fri – Sat: 8am – 12am<br />Sunday: 9am – 10pm</p>
+          </article>
+          <article class="info-card">
+            <h4>Call to Reserve</h4>
+            <p>+973 1700 0000<br />During opening hours</p>
+          </article>
+          <article class="info-card">
+            <h4>Cancellation Policy</h4>
+            <p>Free cancellation up to 24 hours before your reservation</p>
+          </article>
+        </div>
+
+        <div class="form-card">
+          <span class="section-label">Your Details</span>
+          <h2>Complete Your Reservation</h2>
+        
+        
+        
+          <!--to create a booking Form-->
+          <form id="bookingForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="fname" placeholder="e.g. Alaa" required />
+                <span class="form-error" id="fnameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name="lname" placeholder="e.g. Al Mosawi" required />
+                <span class="form-error" id="lnameError"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required />
+                <span class="form-error" id="emailError"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+973 XXXX XXXX" required />
+                <span class="form-error" id="phoneError"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred Date *</label>
+                <input type="date" id="date" name="date" required />
+                <span class="form-error" id="dateError"></span>
+              </div>
+              <div class="form-group">
+                <label for="time">Preferred Time *</label>
+                <input type="time" id="time" name="time" required />
+                <span class="form-error" id="timeError"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guests">Number of Guests *</label>
+                <select id="guests" name="guests" required>
+                  <option value="" disabled selected>Select number of guests</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6+">6+ Guests</option>
+                </select>
+                <span class="form-error" id="guestsError"></span>
+              </div>
+              <div class="form-group">
+                <label for="occasion">Special Occasion</label>
+                <select id="occasion" name="occasion">
+                  <option value="">None</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="business">Business Dinner</option>
+                  <option value="proposal">Romantic Proposal</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="requests">Special Requests</label>
+              <textarea id="requests" name="requests"
+                placeholder="Dietary requirements, seating preferences, allergies..."></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit">Confirm Reservation</button>
+            </div>
+
+            <p class="form-note">Your information is kept private. We will contact you to confirm your booking.</p>
+          </form>
+
+          <div class="booking-success" id="bookingSuccess">
+            <h4>Reservation Received!</h4>
+            <p>Thank you for choosing Trianon. Our team will contact you within 24 hours to confirm your booking.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+    <!--to create a footer-->
+  <footer>
+    <div class="footer-main">
+      <section class="footer-brand">
+        <div class="footer-logo-wrap">
+          <figure class="footer-logo-circle"><span>T</span></figure>
+          <div>
+            <p class="footer-brand-name">Trianon</p>
+            <p class="footer-brand-sub">Pavilion Bahrain</p>
+          </div>
+        </div>
+        <p class="footer-brand-desc">A French brasserie and patisserie in the heart of Pavilion Bahrain. Cuisine,
+          culture, and elegance.</p>
+      </section>
+
+      <!--footer N.bar-->
+      <nav class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="book.html">Book a Table</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+     
+    </div>
+    <small class="footer-bottom">
+      <p>&copy; 2024 Trianon – Pavilion Bahrain. All rights reserved.</p>
+    </small>
+  </footer>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
